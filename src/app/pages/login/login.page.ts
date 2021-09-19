@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -14,15 +15,18 @@ export class LoginPage implements OnInit {
     password:''
     };
 
-  constructor(private router:Router,private alertController:AlertController) { }
+  constructor(private router:Router,private alertController:AlertController, private menu:MenuController) {
+
+  }
 
   ngOnInit() {
+
   }
 
 
    onSubmit(form){
     console.log(this.user);
-    if (this.user.username!=='' && this.user.password!=='')
+    if (this.user.username==='Juan' && this.user.password==='12345')
     {
       let navextras:NavigationExtras={
         state:{
@@ -51,6 +55,16 @@ export class LoginPage implements OnInit {
     });
 
     await alert.present();
+  }
+
+  ionViewDidEnter(){
+
+    this.menu.enable(false);
+  }
+
+  ionViewWillLeave(){
+
+    this.menu.enable(true);
   }
 
 }
