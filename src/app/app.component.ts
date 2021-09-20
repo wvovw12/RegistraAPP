@@ -13,6 +13,11 @@ export class AppComponent {
     text:'Inicio',
     icon:'home'
   },
+  {
+    path:'home',
+    text:'Generar código QR',
+    icon:'qr-code'
+  },
 
 ];
   constructor() {

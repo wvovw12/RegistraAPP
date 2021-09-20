@@ -7,7 +7,6 @@
         <ion-col size="2"></ion-col>
         <ion-col size="8" class="ion-padding">
           <form #LogForm="ngForm" (ngSubmit)="onSubmit(LogForm)" >
-            <ion-title class="ion-padding-top">{{LogForm.valid}}</ion-title>
             <ion-item class="ion-padding-top">
               <ion-label position="floating">Usuario</ion-label>
               <ion-input type="text" required [(ngModel)]="user.username" name="loguser"></ion-input>
@@ -21,8 +20,8 @@
               <p>¿Olvidaste tu Contraseña?</p>
             </ion-text>
             <div class="ion-padding-top">
-              <ion-button  type="submit" expand="block" [disabled]="LogForm.invalid">
-                Iniciar Sesion
+              <ion-button class="blueBackGr" type="submit" expand="block" [disabled]="LogForm.invalid">
+                Ingresar
               </ion-button>
             </div>
 
