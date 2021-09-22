@@ -18,7 +18,11 @@ const routes: Routes = [
   {
     path: 'passrecover',
     loadChildren: () => import('./pages/passrecover/passrecover.module').then( m => m.PassrecoverPageModule)
+  },  {
+    path: 'asignaturas',
+    loadChildren: () => import('./pages/asignaturas/asignaturas.module').then( m => m.AsignaturasPageModule)
   },
+
 ];
 
 @NgModule({
