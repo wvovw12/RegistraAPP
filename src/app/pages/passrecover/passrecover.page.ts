@@ -22,18 +22,18 @@ export class PassrecoverPage implements OnInit {
 
   onSubmit(form){
     console.log(this.user);
-    
+
       let navextras:NavigationExtras={
         state:{
           miusuario:this.user
         }
-      
+
 }
-    
+
       console.log('todo mal!!!!');
       let mensaje='Se ha enviado un mensaje a su correo asociado de:';
       this.presentAlert(mensaje);
-    
+
 
 
   }

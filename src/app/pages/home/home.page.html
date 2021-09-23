@@ -5,12 +5,7 @@
     <ion-buttons slot="start">
       <ion-menu-button menu="first" class="blue"></ion-menu-button>
     </ion-buttons>
-    <ion-buttons slot="end">
-      <ion-menu-button menu="custom" color="danger">
-       <ion-icon slot="icon-only" name="Person" class="blue"></ion-icon>
-      </ion-menu-button>
-    </ion-buttons>
-    <ion-title color="warning" class="ion-text-center">
+    <ion-title color="warning">
       RegistraAPP
     </ion-title>
   </ion-toolbar>
@@ -23,7 +18,6 @@
 
   <div class="ion-text-center ion-padding " *ngIf="nombreUsuario!=='' ">
     <ion-text><h3 class="animate__animated animate__heartBeat">Bienvenido <span>{{nombreUsuario}}</span></h3></ion-text>
-
   </div>
 
   <ion-item class="ion-margin-top ">
