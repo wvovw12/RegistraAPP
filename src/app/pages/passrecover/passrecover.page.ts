@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigationExtras } from '@angular/router';
+import { NavigationExtras, RouterLink } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 import { MenuController } from '@ionic/angular';
 
@@ -39,13 +39,15 @@ export class PassrecoverPage implements OnInit {
   }
 
   async presentAlert(mensaje: string) {
+    let usuario=this.user.username;
     const alert = await this.alertController.create({
       cssClass: 'personalizada',
       header: 'Listo',
-      message: mensaje,
-      buttons: ['OK']
+      message: 'Se ha enviado un mensaje de recuperacion al correo de: '+usuario.toString(),
+      buttons: ['OK'],
+      
     });
-
+    
     await alert.present();
   }
 
