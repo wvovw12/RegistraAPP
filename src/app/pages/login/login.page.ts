@@ -49,7 +49,7 @@ export class LoginPage implements OnInit {
     const alert = await this.alertController.create({
       cssClass: 'personalizada',
       header: 'Error al Ingresar',
-      subHeader: 'Datos no válidos',
+      subHeader: 'Datos no vÃ¡lidos',
       message: mensaje,
       buttons: ['OK']
     });
@@ -59,12 +59,12 @@ export class LoginPage implements OnInit {
 
   ionViewDidEnter(){
 
-    this.menu.enable(false);
+    this.menu.enable(false, 'first');
   }
 
   ionViewWillLeave(){
 
-    this.menu.enable(true);
+    this.menu.enable(true, 'first');
   }
 
 }
