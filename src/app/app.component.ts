@@ -14,23 +14,16 @@ export class AppComponent {
     icon:'home'
   },
   {
-<<<<<<< HEAD
-<<<<<<< refs/remotes/origin/Diego
+
     path:'home',
     text:'Generar código QR',
     icon:'qr-code'
   },
-=======
-=======
->>>>>>> Moisexy
+  {
     path:'asignaturas',
     text:'Asignaturas',
     icon:'book'
   }
-<<<<<<< HEAD
->>>>>>> Creacion de asignaturas y efectos de movimiento
-=======
->>>>>>> Moisexy
 
 ];
   constructor() {
