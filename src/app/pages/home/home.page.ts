@@ -20,9 +20,4 @@ export class HomePage {
 });
 }
 
-openMenuEnd() {
-  console.log(this.openMenuEnd);
-  this.menu.open('custom');
-}
-
 }

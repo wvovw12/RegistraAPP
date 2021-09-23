@@ -34,6 +34,7 @@ export class LoginPage implements OnInit {
         }
       };
 
+      console.log('aaaaaaaaaaaaaaaaaaaaaaaa');
       this.router.navigate(['/home'],navextras);
     }
     else{

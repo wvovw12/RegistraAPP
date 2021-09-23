@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Itemsmenu } from './interfaces/itemsmenu';
-import { AlertController } from '@ionic/angular';
+import { AlertController, NavController } from '@ionic/angular';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -27,7 +27,7 @@ export class AppComponent {
   }
 
 ];
-  constructor(private alertController: AlertController) {
+  constructor(private alertController: AlertController, private navCtrl: NavController) {
   }
 
 
@@ -43,7 +43,7 @@ export class AppComponent {
       header: '',
       subHeader: 'Confirmar',
       message: mensaje,
-      buttons: ['Si', 'No']
+      buttons: [{text:'Si', handler: () =>  {this.navCtrl.navigateForward('login');}}, 'No']
 
     });
 
