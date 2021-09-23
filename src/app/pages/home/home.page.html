@@ -18,7 +18,11 @@
 
   <div class="ion-text-center ion-padding " *ngIf="nombreUsuario!=='' ">
     <ion-text><h3 class="animate__animated animate__heartBeat">Bienvenido <span>{{nombreUsuario}}</span></h3></ion-text>
-
+>>>>>>> Creacion de asignaturas y efectos de movimiento
+=======
+  <div class="ion-text-center ion-padding " *ngIf="nombreUsuario!=='' ">
+    <ion-text><h3 class="animate__animated animate__heartBeat">Bienvenido <span>{{nombreUsuario}}</span></h3></ion-text>
+>>>>>>> Moisexy
   </div>
 
   <ion-item class="ion-margin-top ">
@@ -48,6 +52,31 @@
     </ion-item>
   </ion-list>
 
+
+  <ion-menu side="end" menuId="custom" contentId="main">
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-buttons slot="start">
+          <ion-menu-toggle>
+            <ion-icon id="closeMenuBtn" color="warning" name="close"></ion-icon>
+          </ion-menu-toggle>
+        </ion-buttons>
+        <ion-title>Custom Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item>Menu Item</ion-item>
+        <ion-item>Menu Item</ion-item>
+        <ion-item>Menu Item</ion-item>
+        <ion-item>Menu Item</ion-item>
+        <ion-item>Menu Item</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
 </ion-content>
+
+<ion-router-outlet id="main"></ion-router-outlet>
 
 <app-mainfooter></app-mainfooter>

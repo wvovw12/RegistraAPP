@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -17,6 +18,11 @@ export class HomePage {
         console.log(this.nombreUsuario);
       }
 });
+}
+
+openMenuEnd() {
+  console.log(this.openMenuEnd);
+  this.menu.open('custom');
 }
 
 }
