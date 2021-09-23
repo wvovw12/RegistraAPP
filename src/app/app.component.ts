@@ -14,10 +14,17 @@ export class AppComponent {
     icon:'home'
   },
   {
+<<<<<<< refs/remotes/origin/Diego
     path:'home',
     text:'Generar código QR',
     icon:'qr-code'
   },
+=======
+    path:'asignaturas',
+    text:'Asignaturas',
+    icon:'book'
+  }
+>>>>>>> Creacion de asignaturas y efectos de movimiento
 
 ];
   constructor() {
