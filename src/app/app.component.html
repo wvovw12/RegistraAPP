@@ -1,27 +1,30 @@
 <ion-app>
   <ion-menu side="start" menuId="first" contentId="main">
     <ion-header>
-      <ion-toolbar color="primary">
-        <ion-buttons slot="start">
-          <ion-menu-toggle><ion-back-button defaultHref="" text="Cerrar" mode="ios"></ion-back-button></ion-menu-toggle>
+      <ion-toolbar class="blueBackGr">
+        <ion-buttons slot="end">
+          <ion-menu-toggle>
+            <ion-icon id="closeMenuBtn" color="warning" name="close"></ion-icon>
+          </ion-menu-toggle>
 
         </ion-buttons>
-        <ion-title>Menu</ion-title>
+        <ion-title class="ion-text-center" color="warning">Menu</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content>
-    <ion-menu-toggle>
-      <ion-list lines="full" *ngFor="let item of items" >
+      <ion-menu-toggle>
+        <ion-list lines="full" *ngFor="let item of items">
 
-        <ion-item [routerLink]="item.path" detail>
-          {{item.text}}
-          <ion-icon slot="start" [name]="item.icon"></ion-icon>
-        </ion-item>
+          <ion-item [routerLink]="item.path" detail>
+            {{item.text}}
+            <ion-icon slot="start" [name]="item.icon"></ion-icon>
+          </ion-item>
 
 
 
-      </ion-list>
-      <!-- <ion-list  >
+        </ion-list>
+
+        <!-- <ion-list  >
 
 
 
@@ -47,21 +50,44 @@
         </ion-item>
 
       </ion-list> -->
-    </ion-menu-toggle>
+      </ion-menu-toggle>
+
+          <ion-menu side="end" menuId="custom" contentId="main">
+            <ion-header>
+              <ion-toolbar color="tertiary">
+                <ion-buttons slot="start">
+                  <ion-menu-toggle>
+                    <ion-icon id="closeMenuBtn" color="warning" name="close"></ion-icon>
+                  </ion-menu-toggle>
+                </ion-buttons>
+                <ion-title>Custom Menu</ion-title>
+              </ion-toolbar>
+            </ion-header>
+            <ion-content>
+              <ion-list>
+                <ion-item>Menu Item</ion-item>
+                <ion-item>Menu Item</ion-item>
+                <ion-item>Menu Item</ion-item>
+                <ion-item>Menu Item</ion-item>
+                <ion-item>Menu Item</ion-item>
+              </ion-list>
+            </ion-content>
+          </ion-menu>
+
 
     </ion-content>
     <ion-menu-toggle>
-    <ion-footer>
-      <ion-toolbar>
+      <ion-footer>
+        <ion-toolbar>
 
-        <ion-item routerLink="login" lines="none">
-          Cerrar Sesion
-          <ion-icon slot="start" name="power"></ion-icon>
-        </ion-item>
+          <ion-item routerLink="login" lines="none">
+            <ion-title color="warning">Cerrar Sesion</ion-title>
+            <ion-icon slot="start" name="power" color="danger"></ion-icon>
+          </ion-item>
 
-      </ion-toolbar>
-    </ion-footer>
-  </ion-menu-toggle>
+        </ion-toolbar>
+      </ion-footer>
+    </ion-menu-toggle>
   </ion-menu>
 
 

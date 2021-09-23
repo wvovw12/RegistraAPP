@@ -3,14 +3,16 @@
 
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-menu-button menu="first" color="primary"></ion-menu-button>
+      <ion-menu-button menu="first" class="blue"></ion-menu-button>
     </ion-buttons>
-    <ion-title>
-      AppEjemplo
+    <ion-buttons slot="end">
+      <ion-menu-button menu="custom" color="danger">
+       <ion-icon slot="icon-only" name="Person" class="blue"></ion-icon>
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-title color="warning" class="ion-text-center">
+      RegistraAPP
     </ion-title>
-    <ion-button slot="end" fill="clear" routerLink="../login">
-      <ion-icon slot="icon-only" name="Person"  ></ion-icon>
-    </ion-button>
   </ion-toolbar>
 
 
@@ -20,7 +22,7 @@
 <ion-content [fullscreen]="true">
 
   <div class="ion-text-center ion-padding" *ngIf="nombreUsuario!=='' ">
-    <ion-text><h3>Bienvenido <span>{{nombreUsuario}}</span></h3></ion-text>
+    <ion-text><h3>Bienvenido <span class="blue">{{nombreUsuario}}</span></h3></ion-text>
   </div>
 
   <ion-item class="ion-margin-top">

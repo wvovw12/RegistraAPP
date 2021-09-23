@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-passrecover',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PassrecoverPage implements OnInit {
 
-  constructor() { }
+  constructor(private menu: MenuController) {}
 
   ngOnInit() {
   }
 
+  ionViewDidEnter(){
+
+    this.menu.enable(false);
+  }
+
+  ionViewWillLeave(){
+
+    this.menu.enable(true);
+  }
 }
