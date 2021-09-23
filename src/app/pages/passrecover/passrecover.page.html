@@ -15,19 +15,12 @@
             <h3>Ingrese tu nombre de usuario</h3>
             <ion-item class="ion-padding-top animate__animated animate__fadeIn">
               <ion-label position="floating">Usuario</ion-label>
-              <ion-input type="text" required [(ngModel)]="user" name="recuser"></ion-input>
+              <ion-input type="text" required [(ngModel)]="user.username" name="recuser"></ion-input>
             </ion-item>
 
-<<<<<<< HEAD
-<<<<<<< refs/remotes/origin/Diego
-            <div class="ion-padding-top">
-              <ion-button class="blueBackGr" type="submit" expand="block" [disabled]="LogForm.invalid" routerLink="../login">
-=======
-=======
->>>>>>> Moisexy
             <div class="ion-padding-top animate__animated animate__fadeIn">
-              <ion-button  type="submit" expand="block" [disabled]="LogForm.invalid" routerLink="../login">
->>>>>>> Creacion de asignaturas y efectos de movimiento
+              <ion-button class="blueBackGr" type="submit" expand="block" [disabled]="LogForm.invalid" routerLink="../login">
+
                 Recuperar
               </ion-button>
               <ion-button expand="block" routerLink="../login" color="warning">
