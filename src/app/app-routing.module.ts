@@ -18,13 +18,6 @@ const routes: Routes = [
   {
     path: 'passrecover',
     loadChildren: () => import('./pages/passrecover/passrecover.module').then( m => m.PassrecoverPageModule)
-  },  {
-    path: 'pages',
-    loadChildren: () => import('./qrgenerator/pages/pages.module').then( m => m.PagesPageModule)
-  },
-  {
-    path: 'qrgenerator',
-    loadChildren: () => import('./pages/qrgenerator/qrgenerator.module').then( m => m.QrgeneratorPageModule)
   },
 
 ];
