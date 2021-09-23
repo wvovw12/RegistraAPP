@@ -13,6 +13,11 @@ export class AppComponent {
     text:'Inicio',
     icon:'home'
   },
+  {
+    path:'asignaturas',
+    text:'Asignaturas',
+    icon:'book'
+  }
 
 ];
   constructor() {
