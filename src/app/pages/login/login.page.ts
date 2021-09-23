@@ -59,12 +59,12 @@ export class LoginPage implements OnInit {
 
   ionViewDidEnter(){
 
-    this.menu.enable(false);
+    this.menu.enable(false, 'first');
   }
 
   ionViewWillLeave(){
 
-    this.menu.enable(true);
+    this.menu.enable(true, 'first');
   }
 
 }

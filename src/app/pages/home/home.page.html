@@ -6,9 +6,9 @@
       <ion-menu-button menu="first" class="blue"></ion-menu-button>
     </ion-buttons>
     <ion-buttons slot="end">
-      <ion-menu-button menu="custom" color="danger">
+      <ion-button (click)="openMenuEnd()">
        <ion-icon slot="icon-only" name="Person" class="blue"></ion-icon>
-      </ion-menu-button>
+      </ion-button>
     </ion-buttons>
     <ion-title color="warning" class="ion-text-center">
       RegistraAPP
@@ -51,6 +51,31 @@
     </ion-item>
   </ion-list>
 
+
+  <ion-menu side="end" menuId="custom" contentId="main">
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-buttons slot="start">
+          <ion-menu-toggle>
+            <ion-icon id="closeMenuBtn" color="warning" name="close"></ion-icon>
+          </ion-menu-toggle>
+        </ion-buttons>
+        <ion-title>Custom Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item>Menu Item</ion-item>
+        <ion-item>Menu Item</ion-item>
+        <ion-item>Menu Item</ion-item>
+        <ion-item>Menu Item</ion-item>
+        <ion-item>Menu Item</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
 </ion-content>
+
+<ion-router-outlet id="main"></ion-router-outlet>
 
 <app-mainfooter></app-mainfooter>
