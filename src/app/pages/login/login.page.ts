@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { NavigationExtras, Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 import { MenuController } from '@ionic/angular';
@@ -34,12 +35,15 @@ export class LoginPage implements OnInit {
         }
       };
 
+      console.log('aaaaaaaaaaaaaaaaaaaaaaaa');
       this.router.navigate(['/home'],navextras);
     }
     else{
       console.log('todo mal!!!!');
       let mensaje='Reingrese usuario y/o password';
       this.presentAlert(mensaje);
+      this.user.username = '';
+      this.user.password ='';
     }
 
 

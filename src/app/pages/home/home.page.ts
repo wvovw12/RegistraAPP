@@ -11,18 +11,13 @@ export class HomePage {
 
   nombreUsuario='';
 
-  constructor(private activeroute: ActivatedRoute,private router: Router, private menu: MenuController) {
+  constructor(private activeroute: ActivatedRoute,private router: Router) {
     this.activeroute.queryParams.subscribe(params => {
       if (this.router.getCurrentNavigation().extras.state) {
         this.nombreUsuario = this.router.getCurrentNavigation().extras.state.miusuario.username;
         console.log(this.nombreUsuario);
       }
 });
-}
-
-openMenuEnd() {
-  console.log(this.openMenuEnd);
-  this.menu.open('custom');
 }
 
 }
