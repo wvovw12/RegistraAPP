@@ -22,7 +22,11 @@ const routes: Routes = [
   {
     path: 'passrecover',
     loadChildren: () => import('./pages/passrecover/passrecover.module').then( m => m.PassrecoverPageModule)
+  },  {
+    path: 'registro',
+    loadChildren: () => import('./pages/registro/registro.module').then( m => m.RegistroPageModule)
   },
+
 
 ];
 

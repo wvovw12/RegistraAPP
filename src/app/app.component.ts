@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Itemsmenu } from './interfaces/itemsmenu';
 import { AlertController, NavController } from '@ionic/angular';
 import { RouterLink } from '@angular/router';
+import { Storage } from '@ionic/storage-angular';
 
 @Component({
   selector: 'app-root',
@@ -27,7 +28,11 @@ export class AppComponent {
   }
 
 ];
-  constructor(private alertController: AlertController, private navCtrl: NavController) {
+  constructor(private alertController: AlertController, private navCtrl: NavController, private storage:Storage) {
+  }
+
+  async ngOnInit(){
+    await this.storage.create();
   }
 
 

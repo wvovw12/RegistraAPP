@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { NavigationExtras, Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 import { MenuController } from '@ionic/angular';
@@ -41,6 +42,8 @@ export class LoginPage implements OnInit {
       console.log('todo mal!!!!');
       let mensaje='Reingrese usuario y/o password';
       this.presentAlert(mensaje);
+      this.user.username = '';
+      this.user.password ='';
     }
 
 
@@ -50,7 +53,7 @@ export class LoginPage implements OnInit {
     const alert = await this.alertController.create({
       cssClass: 'personalizada',
       header: 'Error al Ingresar',
-      subHeader: 'Datos no vÃ¡lidos',
+      subHeader: 'Datos no válidos',
       message: mensaje,
       buttons: ['OK']
     });
