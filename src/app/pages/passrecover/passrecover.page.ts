@@ -45,9 +45,9 @@ export class PassrecoverPage implements OnInit {
       header: 'Listo',
       message: 'Se ha enviado un mensaje de recuperacion al correo de: '+usuario.toString(),
       buttons: ['OK'],
-
+      
     });
-
+    
     await alert.present();
   }
 
