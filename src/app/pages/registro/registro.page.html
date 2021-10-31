@@ -1,8 +1,4 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Registro de usuarios</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-logheader></app-logheader>
 
 <ion-content class="ion-padding">
 <ion-text>
@@ -18,7 +14,7 @@
     <ion-input type="password" name="psw" id="password" required [(ngModel)]="usuario.password"></ion-input>
   </ion-item>
   <ion-button type="submit" expand="block" [disabled]="formulario.invalid">Registrar</ion-button>
-
+  <ion-button expand="block" routerLink="../login" color="warning">Volver</ion-button>
 </form>
 
 </ion-content>

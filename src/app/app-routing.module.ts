@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
-import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes, CanActivate } from '@angular/router';
+import { LoginGuardGuard } from './guards/login-guard.guard';
 
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule),
+    canActivate:[LoginGuardGuard]
   },
   {
     path: '',
@@ -16,13 +18,14 @@ const routes: Routes = [
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   },
   {
-    path: 'asignaturas',
-    loadChildren: () => import('./pages/asignaturas/asignaturas.module').then( m => m.AsignaturasPageModule)
+    path: 'clases',
+    loadChildren: () => import('./pages/clases/clases.module').then( m => m.ClasesPageModule)
   },
   {
     path: 'passrecover',
     loadChildren: () => import('./pages/passrecover/passrecover.module').then( m => m.PassrecoverPageModule)
-  },  {
+  },
+  {
     path: 'registro',
     loadChildren: () => import('./pages/registro/registro.module').then( m => m.RegistroPageModule)
   },
