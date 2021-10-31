@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AlertController, NavController } from '@ionic/angular';
 import { RouterLink } from '@angular/router';
+import { Storage } from '@ionic/storage-angular';
 
 @Component({
   selector: 'app-root',
@@ -9,10 +10,14 @@ import { RouterLink } from '@angular/router';
 })
 export class AppComponent {
 
-  constructor(private alertController: AlertController, private navCtrl: NavController) {
+  constructor(private alertController: AlertController, private navCtrl: NavController, private storage:Storage) {
   }
-  
-  
+
+  async ngOnInit(){
+    await this.storage.create();
+  }
+
+
   exitConfirm() {
     let mensaje= '¿Está seguro de que desea salir?';
     this.presentAlert(mensaje);
