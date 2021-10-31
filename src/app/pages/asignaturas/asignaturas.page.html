@@ -1,3 +1,4 @@
+<ion-item class="animate__animated animate__fadeInLeft" >
 <ion-header [translucent]="true" color="primary">
 
 
@@ -16,15 +17,15 @@
 
 
 </ion-header>
-
+</ion-item>
 
 <ion-content>
-
+  
 
   <ion-content >
     <ion-text color="primary">
       <ion-list *ngFor="let per of personas" >
-        <ion-item class="animate__animated animate__fadeInUp" style="border-style: dotted; border-bottom-color: rgb(37, 100, 216); border-top: 0px; border-right: 0px; border-left: 0px;">
+        <ion-item class="animate__animated animate__fadeInLeft" style="border-style: dotted; border-bottom-color: rgb(37, 100, 216); border-top: 0px; border-right: 0px; border-left: 0px;">
           <ion-icon slot="start" name="book"></ion-icon>
           <ion-label>
             <h2>{{per.nombre}}</h2>
