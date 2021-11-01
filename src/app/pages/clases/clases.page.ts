@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-asignaturas',
-  templateUrl: './asignaturas.page.html',
-  styleUrls: ['./asignaturas.page.scss'],
+  templateUrl: './clases.page.html',
+  styleUrls: ['./clases.page.scss'],
 })
-export class AsignaturasPage implements OnInit {
+export class ClasesPage implements OnInit {
 
   personas=[{
     nombre:'Programacion AppMoviles 003D',
@@ -49,7 +49,7 @@ export class AsignaturasPage implements OnInit {
     asistencia:'0%'
 
   },
-    ]
+    ];
 
   constructor() { }
 

@@ -20,31 +20,27 @@
     <ion-text><h3 class="animate__animated animate__heartBeat">Bienvenido <span>{{nombreUsuario}}</span></h3></ion-text>
   </div>
 
-  <ion-item class="ion-margin-top ">
-    <ion-title class="ion-padding-top ">Asignaturas Recientes</ion-title>
-  </ion-item>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="clases">
+        <ion-icon name="book-outline"></ion-icon>
+        <ion-label>Clases</ion-label>
+      </ion-tab-button>
 
-  <ion-list >
-    <ion-item class="ion-padding-top"  >
-      <ion-avatar>
-        <img src="../assets/images/blueline.png" />
-      </ion-avatar>
-      <ion-label>
-        <h3>Programacion de aplicaciones moviles</h3>
-        <p>asd-3131</p>
-        <p>120% asistencia ( 15 de 10 clases)</p>
-      </ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-avatar class="ion-padding-top ">
-        <img src="../assets/images/blueline.png" />
-      </ion-avatar>
-      <ion-label>
-        <h3>Arquitectura de Software </h3>
-        <p>Jazna Muñoz-3131</p>
-        <p>50% asistencia ( 8 de 10 clases)</p>
-      </ion-label>
-    </ion-item>
-  </ion-list>
+      <ion-tab-button tab="inicio">
+        <ion-icon name="home-outline"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="qrcode">
+        <ion-icon name="qr-code-outline"></ion-icon>
+        <ion-label>Escanear QR</ion-label>
+      </ion-tab-button>
+
+
+    </ion-tab-bar>
+  </ion-tabs>
+
+
 
 </ion-content>

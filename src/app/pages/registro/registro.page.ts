@@ -13,8 +13,7 @@ export class RegistroPage implements OnInit {
 
     username:'',
     password:'',
-    status:0
-  }
+  };
 
   constructor(private storage:Storage) { }
 
