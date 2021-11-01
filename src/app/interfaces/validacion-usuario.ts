@@ -2,5 +2,5 @@ import { Usuario } from './usuario';
 export interface ValidacionUsuario {
 
   desc: string;
-  status: number;
+  user: string;
 }
