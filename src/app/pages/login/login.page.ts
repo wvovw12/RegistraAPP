@@ -21,7 +21,7 @@ export class LoginPage implements OnInit {
 
     logeado:ValidacionUsuario={
       desc:'Habilitado',
-      status: null,
+      user: '',
     };
 
   constructor(private router:Router,private alertController:AlertController, private menu:MenuController, private storage:Storage) {
@@ -52,9 +52,8 @@ export class LoginPage implements OnInit {
       let userOk = await this.storage.get(this.usuario.username);
       if(userOk!=null){
         console.log('Usuario encontrado: ' + userOk.username);
-        const val = await this.storage.set(this.logeado.desc, 1);
+        const val = await this.storage.set(this.logeado.desc, this.usuario.username);
         console.log(val);
-        document.location.href='home';
       }
       else{
         this.presentAlert('No hemos encontrado ningún usuario con esas credenciales');
