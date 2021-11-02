@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Storage } from '@ionic/storage-angular';
 import { AlertController, MenuController, NavController } from '@ionic/angular';
 
 @Component({
@@ -9,15 +9,9 @@ import { AlertController, MenuController, NavController } from '@ionic/angular';
 })
 export class HomePage {
 
-  nombreUsuario='';
+  constructor(private alertController: AlertController, private navCtrl: NavController, private storage:Storage) {
 
-  constructor(private activeroute: ActivatedRoute,private router: Router,private alertController: AlertController, private navCtrl: NavController) {
-    this.activeroute.queryParams.subscribe(params => {
-      if (this.router.getCurrentNavigation().extras.state) {
-        this.nombreUsuario = this.router.getCurrentNavigation().extras.state.miusuario.username;
-        console.log(this.nombreUsuario);
-      }
-});}
+}
 
 exitConfirm() {
   let mensaje= '¿Está seguro de que desea salir?';
@@ -30,7 +24,9 @@ async presentAlert(mensaje: string) {
     header: '',
     subHeader: 'Confirmar',
     message: mensaje,
-    buttons: [{text:'Si', handler: () =>  {this.navCtrl.navigateForward('login');}}, 'No']
+    buttons: [{text:'Si', handler: () =>  {
+      this.storage.remove('Habilitado');
+      this.navCtrl.navigateForward('login');}}, 'No']
 
   });
   await alert.present();

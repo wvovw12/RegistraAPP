@@ -54,6 +54,7 @@ export class LoginPage implements OnInit {
         console.log('Usuario encontrado: ' + userOk.username);
         const val = await this.storage.set(this.logeado.desc, this.usuario.username);
         console.log(val);
+        document.location.href='home';
       }
       else{
         this.presentAlert('No hemos encontrado ningún usuario con esas credenciales');

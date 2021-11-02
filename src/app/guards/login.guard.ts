@@ -16,14 +16,14 @@ export class LoginGuardGuard implements CanActivate {
   };
 
   async validar() {
-    if(localStorage.getItem('Habilitado')) {
+    if(await this.storage.get('Habilitado')) {
       console.log('deberia pasar');
       this.navCtrl.navigateRoot('home');
       return false;
     }
     else {
       return true;
-    };
+    }
 
   };
   canActivate(
