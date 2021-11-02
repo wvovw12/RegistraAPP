@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 
 @Injectable({
@@ -7,5 +7,5 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 })
 export class FirestoreService {
 
-  constructor(public database:AngularFirestore) { }
+  constructor(public database:AngularFirestoreModule) { }
 }
